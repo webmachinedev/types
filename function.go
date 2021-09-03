@@ -5,6 +5,7 @@ type Function struct{
 	GoPackageName string
 	Inputs []Field
 	Outputs []Field
+	Body string
 }
 
 // func (f *Function) GoPackageName() string {
