@@ -3,14 +3,8 @@ package types
 type Function struct{
 	Name string
 	GoPackageName string
-	Inputs []struct{
-		Name string
-		Type string
-	}
-	Outputs []struct{
-		Name string
-		Type string
-	}
+	Inputs []Field
+	Outputs []Field
 }
 
 // func (f *Function) GoPackageName() string {
