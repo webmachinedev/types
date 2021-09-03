@@ -1,26 +1,25 @@
 package types
 
-import "strings"
-
-type Function struct {
+type Function struct{
 	Name string
-	Inputs struct {
+	GoPackageName string
+	Inputs []struct{
 		Name string
 		Type string
 	}
-	Outputs struct {
+	Outputs []struct{
 		Name string
 		Type string
 	}
 }
 
-func (f *Function) GoPackageName() string {
-	validchars := "abcdefghijklmnopqrstuvwxyz"
-	name := ""
-	for _, char := range strings.ToLower(f.Name) {
-		if strings.ContainsRune(validchars, char) {
-			name += string(char)
-		}
-	}
-	return name
-}
+// func (f *Function) GoPackageName() string {
+// 	validchars := "abcdefghijklmnopqrstuvwxyz"
+// 	name := ""
+// 	for _, char := range strings.ToLower(f.Name) {
+// 		if strings.ContainsRune(validchars, char) {
+// 			name += string(char)
+// 		}
+// 	}
+// 	return name
+// }
