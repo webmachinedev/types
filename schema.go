@@ -1,3 +1,3 @@
 package types
 
-type Schema struct {}
+type Schema string
