@@ -6,7 +6,7 @@ type Function struct {
 	Name string
 }
 
-func (f *Function) GoFileName() string {
+func (f *Function) GoPackageName() string {
 	validchars := "abcdefghijklmnopqrstuvwxyz"
 	name := ""
 	for _, char := range f.Name {
@@ -14,6 +14,5 @@ func (f *Function) GoFileName() string {
 			name += string(char)
 		}
 	}
-	name += ".go"
 	return name
 }
